@@ -13,9 +13,9 @@ function updateTime() {
 	const minRot = (min*6) + (sec/10);
 	const secRot = sec*6;
 
-	hourHand.style.transform = `rotate(${hrRot})`;
-	minHand.style.transform = `rotate(${minRot})`;
-	secHand.style.transform = `rotate(${secRot})`;
+	hourHand.style.transform = `rotate(${hrRot}deg)`;
+	minHand.style.transform = `rotate(${minRot}deg)`;
+	secHand.style.transform = `rotate(${secRot}deg)`;
 }
 
 updateTime();
