@@ -9,9 +9,9 @@ function updateTime() {
 	const min = now.getMinutes();
 	const sec = now.getSeconds();
 
-	const hrRot = (hr*30) + (min/2);
-	const minRot = (min*6) + (sec/10);
-	const secRot = sec*6;
+	const hrRot = (hr*30 + min/2)%360;
+	const minRot = (min*6 + sec/10)%360;
+	const secRot = (sec*6)%360;
 
 	hourHand.style.transform = `rotate(${hrRot}deg)`;
 	minHand.style.transform = `rotate(${minRot}deg)`;
