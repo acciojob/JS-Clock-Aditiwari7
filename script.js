@@ -23,4 +23,4 @@ function updateTime() {
 	// secHand.style.transform = `rotate(${secRot+90}deg)`;
 }
 
-setInterval(updateTime, 1000);
+setInterval(updateTime, 500);
