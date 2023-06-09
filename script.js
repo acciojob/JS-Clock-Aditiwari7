@@ -4,10 +4,10 @@ const minHand = document.querySelector(".min-hand");
 const secHand = d0cument.querySelector(".second-hand");
 
 function updateTime() {
-	const time = new Date();
-	const hr = time.getHours();
-	const min = time.getMinutes();
-	const sec = time.getSeconds();
+	const now = new Date();
+	const hr = now.getHours();
+	const min = now.getMinutes();
+	const sec = now.getSeconds();
 
 	const hrRot = (hr*30) + (min/2);
 	const minRot = (min*6) + (sec/10);
