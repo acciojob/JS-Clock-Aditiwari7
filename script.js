@@ -1,21 +1,29 @@
 //your code here
-const hourHand = document.querySelector(".hour-hand");
-const minHand = document.querySelector(".min-hand");
-const secHand = d0cument.querySelector(".second-hand");
+const secondHand = document.querySelector('.second-hand');
+const minsHand = document.querySelector('.min-hand');
+const hourHand = document.querySelector('.hour-hand');
 
-function updateTime() {
-	const now = new Date();
-	const hr = now.getHours();
-	const min = now.getMinutes();
-	const sec = now.getSeconds();
 
-	const hrRot = (hr*30 + min/2)%360;
-	const minRot = (min*6 + sec/10);
-	const secRot = (sec*6);
+function setDate() {
+    const now = new Date();
+    
 
-	hourHand.style.transform = `rotate(${hrRot+90}deg)`;
-	minHand.style.transform = `rotate(${minRot+90}deg)`;
-	secHand.style.transform = `rotate(${secRot+90}deg)`;
+    const seconds = now.getSeconds();
+    const mins = now.getMinutes();
+    const hour = now.getHours();
+
+    console.log("curr", now, seconds, mins, hour)
+
+    const hourDegrees = (30*hour + mins/2)%360;
+    const minsDegrees = 6*mins;
+    const secondsDegrees = 6*seconds;
+
+
+    console.log('degres', hourDegrees, minsDegrees, secondsDegrees)
+    
+    secondHand.style.transform = `rotate(${secondsDegrees + 90}deg)`;
+    minsHand.style.transform = `rotate(${minsDegrees + 90}deg)`;
+    hourHand.style.transform = `rotate(${hourDegrees +90 }deg)`;
 }
 
-setInterval(updateTime, 1000);
+setInterval(setDate, 1000);
