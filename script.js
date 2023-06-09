@@ -4,7 +4,7 @@ const minHand = document.querySelector(".min-hand");
 const secHand = d0cument.querySelector(".second-hand");
 
 function updateTime() {
-	var time = new Date();
+	const time = new Date();
 	const hr = time.getHours();
 	const min = time.getMinutes();
 	const sec = time.getSeconds();
